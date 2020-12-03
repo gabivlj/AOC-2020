@@ -57,3 +57,10 @@ pub fn get_advent_input_02() -> Vec<Password> {
         .map(|string| Password::from(string))
         .collect()
 }
+
+pub fn get_advent_input_03() -> Vec<Vec<char>> {
+    file_split_input("./input_03.txt")
+        .iter()
+        .map(|str| str.chars().collect())
+        .collect()
+}

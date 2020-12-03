@@ -1,8 +1,12 @@
 mod file;
 mod first;
 mod second;
+mod third;
 
-fn main() {}
+fn main() {
+    let m = file::get_advent_input_03();
+    println!("result {}", third::advent_of_code_03_ext(&m));
+}
 
 #[cfg(test)]
 mod tests {
