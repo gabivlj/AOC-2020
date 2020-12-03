@@ -3,10 +3,7 @@ mod first;
 mod second;
 mod third;
 
-fn main() {
-    let m = file::get_advent_input_03();
-    println!("result {}", third::advent_of_code_03_ext(&m));
-}
+fn main() {}
 
 #[cfg(test)]
 mod tests {
@@ -14,6 +11,7 @@ mod tests {
     use crate::{
         first::{advent_of_code_01, advent_of_code_01_ext},
         second::{advent_of_code_02, advent_of_code_02_ext},
+        third::{advent_of_code_03, advent_of_code_03_ext},
     };
 
     #[test]
@@ -32,5 +30,14 @@ mod tests {
         assert_eq!(506, result);
         let result = advent_of_code_02_ext(file::get_advent_input_02());
         assert_eq!(443, result);
+    }
+
+    #[test]
+    fn advent_test_03() {
+        let input = file::get_advent_input_03();
+        let result = advent_of_code_03(&input, [1, 3]);
+        assert_eq!(result, 252);
+        let result = advent_of_code_03_ext(&input);
+        assert_eq!(result, 2608962048);
     }
 }

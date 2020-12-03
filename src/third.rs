@@ -1,5 +1,4 @@
 const TREE: char = '#';
-const SPACE: char = '.';
 
 pub fn advent_of_code_03(lines: &Vec<Vec<char>>, slope_patt: [usize; 2]) -> usize {
     let mut i = 0;
